@@ -9,8 +9,7 @@ npm install
 npm run build-dev
 npm run start
 ```
-
-`http://localhost:5500/example-on-local.html` を開くと、ローカルでルビフルボタンを試すことができます。
+サーバーを起動したあとに[http://localhost:5500/example-on-local.html](http://localhost:5500/example-on-local.html) を開くと、ローカルでルビフルボタンを試すことができます。
 
 ## リリース用にルビフルボタンをビルドする
 
