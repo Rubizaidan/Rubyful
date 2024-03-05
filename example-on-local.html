@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rubyful.js 動作テスト</title>
+  <script>
+    window.RubyfulJsApp = {
+      refPaths: [
+        "//*[@id=\"app\"]/div/h1",
+        "//*[contains(@class,'content')]",
+      ]
+    };
+  </script>
+  <script async src="/dist/rubyful.js"></script>
+  <style>
+    #app .content {
+      width: 360px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+
+<body class="has-navbar-fixed-top">
+  <div id="app">
+    <div class="content is-marginless">
+      <h1>ようこそ、私たちのウェブサイトへ！</h1>
+      <p>ここは私たちのウェブサイトです。色々な情報を共有しています。私たちの目指すところは、ユーザーにとって最高の体験を提供することです。</p>
+      <h2>サービス</h2>
+      <p>私たちは以下のサービスを<ruby class="my-ruby-class">提供<rt>ていきょう</rt></ruby>しています：</p>
+      <p>- ウェブ開発：私たちはあなたのビジネスに最適なウェブサイトを設計し、開発します。</p>
+      <p>- モバイルアプリ開発：私たちはiOSとAndroidの両方のプラットフォームで動作するモバイルアプリを開発します。</p>
+      <p>- データ分析：私たちはあなたのビジネスに関するデータを分析し、有益な洞察を提供します。</p>
+      <h2>コンタクト</h2>
+      <p>お問い合わせはメールでお願いします。私たちはあなたからのメッセージを待っています。</p>
+    </div>
+  </div>
+</body>
+
+</html>

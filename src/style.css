@@ -1,0 +1,48 @@
+rt.rubyfuljs-insert {
+    display: none;
+}
+
+rt.rubyfuljs-insert.is-shown {
+    display: revert;
+}
+
+button.rubyfuljs-button {
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 16px;
+    background-color: #fff;
+    border: 1px solid #000;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    cursor: pointer;
+}
+
+.rubyfuljs-tooltip {
+    font-size: .85rem;
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #aaa;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 240px;
+    z-index: 1001;
+    box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.2);
+}
+
+.rubyfuljs-tooltip-close-button {
+    position: absolute;
+    font-size: 1.25rem;
+    top: -.75rem;
+    right: -.75rem;
+    cursor: pointer;
+    background-color: white;
+    border: 1px solid #aaa;
+    border-radius: 50%;
+}
+
+.rubyfuljs-tooltip div:first-child {
+    margin-bottom:  .5rem;
+}
