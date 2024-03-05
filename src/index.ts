@@ -1,5 +1,5 @@
 // kuromojiライブラリのインポート
-import * as kuromoji from '../external/src/kuromoji';
+import * as kuromoji from 'kuromoji';
 import './style.css';
 
 declare global {
