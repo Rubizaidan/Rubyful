@@ -4,4 +4,3 @@ src/index.js
 dist
 yarn-error.log
 .env
-.env.development

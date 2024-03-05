@@ -7,8 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --mode production",
     "build-dev": "webpack --mode development",
-    "start": "ts-node src/index.ts",
-    "watch": "webpack --watch --mode development"
+    "watch": "webpack --watch --mode development",
+    "start:server": "http-server . -p 5500",
+    "start": "npm run start:server & npm run watch"
   },
   "keywords": [],
   "author": "",
@@ -18,6 +19,7 @@
     "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.8.1",
     "dotenv-webpack": "^8.0.1",
+    "http-server": "^14.1.1",
     "kuromoji": "^0.1.2",
     "path": "^0.12.7",
     "style-loader": "^3.3.3",
