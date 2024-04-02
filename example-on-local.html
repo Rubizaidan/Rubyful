@@ -21,7 +21,6 @@
     }
   </style>
 </head>
-
 <body class="has-navbar-fixed-top">
   <div id="app">
     <div class="content is-marginless">
@@ -34,6 +33,14 @@
       <p>- データ分析：私たちはあなたのビジネスに関するデータを分析し、有益な洞察を提供します。</p>
       <h2>コンタクト</h2>
       <p>お問い合わせはメールでお願いします。私たちはあなたからのメッセージを待っています。</p>
+      <script>
+        // content領域内のscriptタグ内に漢字の入ったテキストが入っている場合に正常動作するかをテストしてください。
+        document.addEventListener("DOMContentLoaded", function() {
+          setTimeout(function() {
+            console.log("content領域内のscriptタグ内に漢字の入ったテキストが入っている場合に正常動作するかをテストしてください。");
+          }, 5000);
+        });
+      </script>
     </div>
   </div>
 </body>
