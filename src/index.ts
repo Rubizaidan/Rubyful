@@ -236,8 +236,6 @@ window.addEventListener('load', async () => {
     }
   };
   button.addEventListener('mouseenter', showTooltip);
-  // ボタンを画面下部に追加
-  document.body.appendChild(button);
 
   try {
     let result;
@@ -261,4 +259,7 @@ window.addEventListener('load', async () => {
     // エラーが発生した場合、consoleにエラーを表示します。
     console.error('Modified script execution error:', error);
   }
+
+    // ボタンを画面下部に追加
+    document.body.appendChild(button);
 })
