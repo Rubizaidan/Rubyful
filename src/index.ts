@@ -87,12 +87,14 @@ const processHtmlWithKuromoji = async (htmlText: string, isRubyOn: string): Prom
 
   // HTMLをタグとテキストに分ける
   const htmlParts = htmlText.split(/(<ruby.*?<\/ruby>|<.*?>)/);
-  let followsStyleOrScriptTag = false;
-  const processedPartsPromises = htmlParts.map((part) => {
+  const processedPartsPromises = htmlParts.map((part, index, htmlParts) => {
+    let prevPartIsStyleOrScriptTag = false;
+    if(index > 0){
+      prevPartIsStyleOrScriptTag = htmlParts[index - 1].startsWith('<style') || htmlParts[index - 1].startsWith('<script');
+    } 
     // タグでない、かつ漢字を含む部分を形態素解析
-    if (!part.startsWith('<') && !followsStyleOrScriptTag) {
+    if (!part.startsWith('<') && !prevPartIsStyleOrScriptTag) {
       const path = tokenizer.tokenize(part);
-      followsStyleOrScriptTag = false;
       // 形態素解析した結果からルビ用のHTMLを生成
       return path.map((token: any) => {
         // 漢字が含まれており読みがある場合にルビを生成
@@ -103,10 +105,6 @@ const processHtmlWithKuromoji = async (htmlText: string, isRubyOn: string): Prom
         }
       }).join('');
     } else {
-      //check if the tag is a style or script tag
-      if (part.startsWith('<style') || part.startsWith('<script')) {
-        followsStyleOrScriptTag = true;
-      }
       // タグの部分はそのまま返す
       return Promise.resolve(part);
     }
